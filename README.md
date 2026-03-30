@@ -1,20 +1,22 @@
 # Yakuphan
 
-Software developer from Turkey. I build local-first CLI tools, automation pipelines, and desktop apps — mostly in Python.
+Tool geliştiren, sistem kuran, sade düşünen bir geliştiriciyim.
+Odak alanlarım: local-first CLI araçları, otomasyon pipeline'ları ve geliştirici deneyimi.
 
-## What I'm working on
+## Ne yapıyorum
 
-**[WinstonRed](https://github.com/yakuphanycl/WinstonRedGuard)** — A monorepo for managing the full lifecycle of software products: from idea registration through build, policy checks, and governed release. Includes a factory pipeline that runs real tests and produces real artifacts, plus an Electron dashboard for observability.
+- Python ile üretime yakın CLI araçları geliştiriyorum.
+- Tekrarlayan süreçleri otomasyon ve release gate'leri ile standartlaştırıyorum.
+- Ölçülebilir, sade ve bakım maliyeti düşük developer tooling kuruyorum.
 
-## Tools I've built
+## Öne çıkan 3 proje
 
-| Project | What it does |
-|---------|-------------|
-| [pc_motor](https://github.com/yakuphanycl/pc_motor) | Snapshot-based CLI to analyze CPU, RAM, and disk behavior over time |
-| [workspace-inspector](https://github.com/yakuphanycl/workspace-inspector) | CLI to scan a workspace and generate a clear file/size summary |
-| [cli_doctor](https://github.com/yakuphanycl/cli_doctor) | Diagnostic tool for CLI environments |
-| [analiz_bot](https://github.com/yakuphanycl/analiz_bot) | Analysis automation bot |
+- [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard): Local-first Python uygulamaları, CLI araçları, release gate'leri ve deneysel laboratuvarlar için monorepo.
+- [cli_doctor](https://github.com/yakuphanycl/cli_doctor): CLI ortamlarını ve geliştirici kurulumlarını teşhis eden tanılama aracı.
+- [workspace-inspector](https://github.com/yakuphanycl/workspace-inspector): Workspace tarayıp dosya/boyut özetini net veren CLI aracı.
 
-## Tech
+## Hızlı linkler
 
-`Python` `TypeScript` `React` `Electron` `PowerShell` `GitHub Actions`
+- [Tüm repolar](https://github.com/yakuphanycl?tab=repositories)
+- [Pinned projeler](https://github.com/yakuphanycl)
+- [Instagram](https://www.instagram.com/yakuphan.yucel)
