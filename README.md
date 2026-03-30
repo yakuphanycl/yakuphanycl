@@ -1,22 +1,22 @@
 # Yakuphan
 
-Tool geliştiren, sistem kuran, sade düşünen bir geliştiriciyim.
-Odak alanlarım: local-first CLI araçları, otomasyon pipeline'ları ve geliştirici deneyimi.
+Software engineer focused on local-first CLI tooling, automation pipelines, and practical developer workflows.
+I build reliable, maintainable systems that prioritize clarity, measurable outcomes, and low operational overhead.
 
-## Ne yapıyorum
+## What I Do
 
-- Python ile üretime yakın CLI araçları geliştiriyorum.
-- Tekrarlayan süreçleri otomasyon ve release gate'leri ile standartlaştırıyorum.
-- Ölçülebilir, sade ve bakım maliyeti düşük developer tooling kuruyorum.
+- Build production-grade Python CLI tools for everyday engineering workflows.
+- Standardize repetitive processes with automation and release gates.
+- Design developer tooling that is simple to operate, observable, and easy to maintain.
 
-## Öne çıkan 3 proje
+## Featured Projects
 
-- [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard): Local-first Python uygulamaları, CLI araçları, release gate'leri ve deneysel laboratuvarlar için monorepo.
-- [cli_doctor](https://github.com/yakuphanycl/cli_doctor): CLI ortamlarını ve geliştirici kurulumlarını teşhis eden tanılama aracı.
-- [workspace-inspector](https://github.com/yakuphanycl/workspace-inspector): Workspace tarayıp dosya/boyut özetini net veren CLI aracı.
+- [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard): Monorepo for local-first Python applications, CLI tooling, release gates, and experimental labs.
+- [cli_doctor](https://github.com/yakuphanycl/cli_doctor): Diagnostic tool for validating CLI environments and developer machine setup.
+- [workspace-inspector](https://github.com/yakuphanycl/workspace-inspector): CLI utility that scans a workspace and produces a clear file and size summary.
 
-## Hızlı linkler
+## Quick Links
 
-- [Tüm repolar](https://github.com/yakuphanycl?tab=repositories)
-- [Pinned projeler](https://github.com/yakuphanycl)
+- [All repositories](https://github.com/yakuphanycl?tab=repositories)
+- [Pinned projects](https://github.com/yakuphanycl)
 - [Instagram](https://www.instagram.com/yakuphan.yucel)
