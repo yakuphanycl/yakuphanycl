@@ -1,22 +1,32 @@
 # Yakuphan
 
-Software engineer focused on local-first CLI tooling, automation pipelines, and practical developer workflows.
-I build reliable, maintainable systems that prioritize clarity, measurable outcomes, and low operational overhead.
+Software engineer building local-first Python tooling, automation pipelines, and developer infrastructure.
+Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) — 61 apps, 1200+ tests, one governed monorepo.
 
-## What I Do
+## Key Products
 
-- Build production-grade Python CLI tools for everyday engineering workflows.
-- Standardize repetitive processes with automation and release gates.
-- Design developer tooling that is simple to operate, observable, and easy to maintain.
+**[PulseBoard](https://winstonredguard-production.up.railway.app)** — GitHub repo health monitor (live SaaS)
+7 collectors (CI, Coverage, PR Age, Commits, Dependencies, License, Release Cadence) &rarr; single Pulse Score 0-100. PR commit status checks, Slack score-drop alerts, public profiles, badge embed, TR/EN i18n. FastAPI + aiosqlite. 186 tests.
 
-## Featured Projects
+**[research_motor](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/research_motor)** — OSINT & research decision engine
+9 adapters (Reddit, GitHub, Twitter, web, repo audit, username/email/name OSINT). Scans 77 sites for username presence. SQLite cache, HTML reports, opportunity scoring. 159 tests.
 
-- [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard): Monorepo for local-first Python applications, CLI tooling, release gates, and experimental labs.
-- [cli_doctor](https://github.com/yakuphanycl/cli_doctor): Diagnostic tool for validating CLI environments and developer machine setup.
-- [workspace-inspector](https://github.com/yakuphanycl/workspace-inspector): CLI utility that scans a workspace and produces a clear file and size summary.
+**[WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard)** — governed app portfolio
+61 apps, CI 17/17 green, governance 55/55 passing. stdlib-first, SQLite everywhere, zero external deps.
 
-## Quick Links
+## Numbers
 
+| | |
+|---|---|
+| Apps | 61 (44 active, 17 experimental) |
+| Tests | 1200+ |
+| CI | 17/17 green |
+| Governance | 55/55 passing |
+| Live deploy | [PulseBoard on Railway](https://winstonredguard-production.up.railway.app) |
+
+## Links
+
+- [yakuphanycl.github.io](https://yakuphanycl.github.io)
+- [LinkedIn](https://linkedin.com/in/yakuphanycl)
+- [X](https://x.com/rg_winston3375)
 - [All repositories](https://github.com/yakuphanycl?tab=repositories)
-- [Pinned projects](https://github.com/yakuphanycl)
-- [Instagram](https://www.instagram.com/yakuphan.yucel)
