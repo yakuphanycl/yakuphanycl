@@ -1,6 +1,6 @@
 # Yakuphan
 
-Software engineer building local-first Python tooling, automation pipelines, and developer infrastructure.
+Software engineer building local-first Python tooling, AI agent infrastructure, and automation pipelines.
 Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) — 61 apps, 1200+ tests, one governed monorepo.
 
 ## Key Products
@@ -10,6 +10,9 @@ Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) — 61 a
 
 **[research_motor](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/research_motor)** — OSINT & research decision engine
 9 adapters (Reddit, GitHub, Twitter, web, repo audit, username/email/name OSINT). Scans 77 sites for username presence. SQLite cache, HTML reports, opportunity scoring. 159 tests.
+
+**[instinct-mcp](https://github.com/yakuphanycl/instinct)** — Self-learning memory for AI coding agents
+Observe &rarr; repeat &rarr; mature &rarr; suggest pipeline. Confidence-based pattern promotion, project-aware, SQLite backend. MCP server + CLI + Python API. [PyPI package](https://pypi.org/project/instinct-mcp/).
 
 **[WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard)** — governed app portfolio
 61 apps, CI 17/17 green, governance 55/55 passing. stdlib-first, SQLite everywhere, zero external deps.
@@ -27,6 +30,7 @@ Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) — 61 a
 ## Links
 
 - [yakuphanycl.github.io](https://yakuphanycl.github.io)
+- [Medium](https://medium.com/@yakuphan.yucel11)
 - [LinkedIn](https://linkedin.com/in/yakuphanycl)
 - [X](https://x.com/rg_winston3375)
 - [All repositories](https://github.com/yakuphanycl?tab=repositories)
