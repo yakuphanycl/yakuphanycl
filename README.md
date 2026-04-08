@@ -1,24 +1,19 @@
-# Yakuphan
+# Yakup Han Ycl
 
 [![CI](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/codeql.yml)
 
-Software engineer building local-first Python tooling, AI agent infrastructure, and automation pipelines.
-Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) — 61 apps, 1200+ tests, one governed monorepo.
+Software engineer building local-first Python tooling, AI agent infrastructure, and automation systems.
+Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) with a governed monorepo approach.
 
-## Key Products
+## Featured Repositories
 
-**[PulseBoard](https://winstonredguard-production.up.railway.app)** — GitHub repo health monitor (live SaaS)
-7 collectors (CI, Coverage, PR Age, Commits, Dependencies, License, Release Cadence) &rarr; single Pulse Score 0-100. PR commit status checks, Slack score-drop alerts, public profiles, badge embed, TR/EN i18n. FastAPI + aiosqlite. 186 tests.
-
-**[research_motor](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/research_motor)** — OSINT & research decision engine
-9 adapters (Reddit, GitHub, Twitter, web, repo audit, username/email/name OSINT). Scans 77 sites for username presence. SQLite cache, HTML reports, opportunity scoring. 159 tests.
-
-**[instinct-mcp](https://github.com/yakuphanycl/instinct)** — Self-learning memory for AI coding agents
-Observe &rarr; repeat &rarr; mature &rarr; suggest pipeline. Confidence-based pattern promotion, project-aware, SQLite backend. MCP server + CLI + Python API. [PyPI package](https://pypi.org/project/instinct-mcp/).
-
-**[WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard)** — governed app portfolio
-61 apps, CI 17/17 green, governance 55/55 passing. stdlib-first, SQLite everywhere, zero external deps.
+| Repository | Focus |
+|---|---|
+| [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard) | Local-first Python monorepo for automation, OSINT workflows, AI utilities, and developer tooling |
+| [instinct](https://github.com/yakuphanycl/instinct) | Self-learning memory MCP server for AI coding agents ([PyPI](https://pypi.org/project/instinct-mcp/)) |
+| [research_motor](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/research_motor) | OSINT and research decision engine with multi-source adapters |
+| [PulseBoard](https://winstonredguard-production.up.railway.app) | Live SaaS for GitHub repository health scoring and monitoring |
 
 ## Numbers
 
@@ -29,6 +24,12 @@ Observe &rarr; repeat &rarr; mature &rarr; suggest pipeline. Confidence-based pa
 | CI | 17/17 green |
 | Governance | 55/55 passing |
 | Live deploy | [PulseBoard on Railway](https://winstonredguard-production.up.railway.app) |
+
+## Current Focus
+
+- Hardening CI/security baselines across active repositories
+- Expanding agent tooling around MCP and reusable automation patterns
+- Keeping projects stdlib-first and SQLite-centered for predictable operations
 
 ## Repository Baseline
 
