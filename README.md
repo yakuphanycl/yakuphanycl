@@ -1,5 +1,8 @@
 # Yakuphan
 
+[![CI](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/codeql.yml)
+
 Software engineer building local-first Python tooling, AI agent infrastructure, and automation pipelines.
 Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) — 61 apps, 1200+ tests, one governed monorepo.
 
@@ -26,6 +29,12 @@ Observe &rarr; repeat &rarr; mature &rarr; suggest pipeline. Confidence-based pa
 | CI | 17/17 green |
 | Governance | 55/55 passing |
 | Live deploy | [PulseBoard on Railway](https://winstonredguard-production.up.railway.app) |
+
+## Repository Baseline
+
+- CI and CodeQL run on push + pull request
+- Dependabot is enabled for weekly GitHub Actions updates
+- `main` branch protection requires review and resolved conversations
 
 ## Links
 
