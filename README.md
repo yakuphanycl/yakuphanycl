@@ -1,4 +1,4 @@
-# Yakup Han Ycl
+# Yakuphan Yücel
 
 [![CI](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/codeql.yml)
