@@ -1,0 +1,45 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  schedule:
+    - cron: '0 3 * * 1'
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    name: analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect languages
+        id: detect
+        shell: bash
+        run: |
+          langs="actions"
+          if git ls-files '*.py' | grep -q .; then
+            langs="$langs,python"
+          fi
+          if git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' | grep -q .; then
+            langs="$langs,javascript-typescript"
+          fi
+          echo "languages=$langs" >> "$GITHUB_OUTPUT"
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ steps.detect.outputs.languages }}
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Analyze
+        uses: github/codeql-action/analyze@v3
+
