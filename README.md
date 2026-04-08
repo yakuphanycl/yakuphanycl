@@ -2,6 +2,10 @@
 
 [![CI](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/yakuphanycl/yakuphanycl/actions/workflows/codeql.yml)
+[![Followers](https://img.shields.io/github/followers/yakuphanycl?label=Followers&style=flat)](https://github.com/yakuphanycl?tab=followers)
+[![Public Repositories](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fyakuphanycl&query=%24.public_repos&label=Public%20Repos&style=flat)](https://github.com/yakuphanycl?tab=repositories)
+[![WinstonRedGuard Stars](https://img.shields.io/github/stars/yakuphanycl/WinstonRedGuard?label=WinstonRedGuard%20Stars&style=flat)](https://github.com/yakuphanycl/WinstonRedGuard/stargazers)
+[![instinct Stars](https://img.shields.io/github/stars/yakuphanycl/instinct?label=instinct%20Stars&style=flat)](https://github.com/yakuphanycl/instinct/stargazers)
 
 Software engineer building local-first Python tooling, AI agent infrastructure, and automation systems.
 Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) with a governed monorepo approach.
