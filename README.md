@@ -14,32 +14,39 @@ Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) with a g
 
 | Repository | Focus |
 |---|---|
-| [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard) | Local-first Python monorepo for automation, OSINT workflows, AI utilities, and developer tooling |
+| [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard) | Local-first Python monorepo — 59 apps for automation, OSINT, AI utilities, and developer tooling |
 | [instinct](https://github.com/yakuphanycl/instinct) | Self-learning memory MCP server for AI coding agents ([PyPI](https://pypi.org/project/instinct-mcp/)) |
-| [research_motor](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/research_motor) | OSINT and research decision engine with multi-source adapters |
+| [awesome-mcp-servers](https://github.com/yakuphanycl/awesome-mcp-servers) | Curated collection of MCP servers |
 | [PulseBoard](https://winstonredguard-production.up.railway.app) | Live SaaS for GitHub repository health scoring and monitoring |
 
 ## Numbers
 
 | | |
 |---|---|
-| Apps | 61 (44 active, 17 experimental) |
-| Tests | 1200+ |
-| CI | 17/17 green |
-| Governance | 55/55 passing |
+| Apps | 59 |
+| Tests | 2900+ |
+| CI | 5 workflows / 78 jobs — all green |
+| Governance | 55 gates passing |
 | Live deploy | [PulseBoard on Railway](https://winstonredguard-production.up.railway.app) |
+
+## Highlights
+
+- **Agent Coordination Protocol (ACP)** — a 3-layer protocol (SQLite TTL locks, durable file state, SSE broadcast) for concurrent AI coding agents working in the same repo. [Paper](https://github.com/yakuphanycl/WinstonRedGuard/blob/main/ACP_PAPER.md)
+- **WRG DevGuard** — automated redacted-policy scanner that runs on every push
+- **instinct** — MCP server that lets AI agents learn patterns from their own sessions and recall them later
 
 ## Current Focus
 
+- Agent coordination tooling (ACP protocol, `wrg_agent` CLI)
+- Expanding MCP ecosystem (instinct, WRG MCP server)
 - Hardening CI/security baselines across active repositories
-- Expanding agent tooling around MCP and reusable automation patterns
 - Keeping projects stdlib-first and SQLite-centered for predictable operations
 
 ## Repository Baseline
 
-- CI and CodeQL run on push + pull request
-- Dependabot is enabled for weekly GitHub Actions updates
+- 5 CI workflows: test matrix, CodeQL, Devguard, desktop release, Dependabot
 - `main` branch protection requires review and resolved conversations
+- 55-gate governance check enforced across all apps
 
 ## Links
 
