@@ -6,9 +6,16 @@
 [![Public Repositories](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fyakuphanycl&query=%24.public_repos&label=Public%20Repos&style=flat)](https://github.com/yakuphanycl?tab=repositories)
 [![WinstonRedGuard Stars](https://img.shields.io/github/stars/yakuphanycl/WinstonRedGuard?label=WinstonRedGuard%20Stars&style=flat)](https://github.com/yakuphanycl/WinstonRedGuard/stargazers)
 [![instinct Stars](https://img.shields.io/github/stars/yakuphanycl/instinct?label=instinct%20Stars&style=flat)](https://github.com/yakuphanycl/instinct/stargazers)
+[![instinct on PyPI](https://img.shields.io/pypi/v/instinct-mcp?label=instinct-mcp&color=34D058&style=flat)](https://pypi.org/project/instinct-mcp/)
+[![PulseBoard](https://img.shields.io/website?url=https%3A%2F%2Fwinstonredguard-production.up.railway.app&label=PulseBoard&up_message=live&down_message=down&style=flat)](https://winstonredguard-production.up.railway.app)
 
 Software engineer building local-first Python tooling, AI agent infrastructure, and automation systems.
 Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) with a governed monorepo approach.
+
+<p align="left">
+  <img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=yakuphanycl&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=default" height="165">
+  <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yakuphanycl&layout=compact&hide_border=true&theme=default&langs_count=8" height="165">
+</p>
 
 ## Featured Repositories
 
