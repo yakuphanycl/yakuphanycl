@@ -7,14 +7,15 @@
 [![WinstonRedGuard Stars](https://img.shields.io/github/stars/yakuphanycl/WinstonRedGuard?label=WinstonRedGuard%20Stars&style=flat)](https://github.com/yakuphanycl/WinstonRedGuard/stargazers)
 [![instinct Stars](https://img.shields.io/github/stars/yakuphanycl/instinct?label=instinct%20Stars&style=flat)](https://github.com/yakuphanycl/instinct/stargazers)
 [![instinct on PyPI](https://img.shields.io/pypi/v/instinct-mcp?label=instinct-mcp&color=34D058&style=flat)](https://pypi.org/project/instinct-mcp/)
+[![wrg-devguard on PyPI](https://img.shields.io/pypi/v/wrg-devguard?label=wrg-devguard&color=34D058&style=flat)](https://pypi.org/project/wrg-devguard/)
 [![PulseBoard](https://img.shields.io/website?url=https%3A%2F%2Fwinstonredguard-production.up.railway.app&label=PulseBoard&up_message=live&down_message=down&style=flat)](https://winstonredguard-production.up.railway.app)
 
 Software engineer building local-first Python tooling, AI agent infrastructure, and automation systems.
-Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) with a governed monorepo approach.
+Solo founder of [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard) with a governed monorepo approach.
 
 <p align="left">
-  <img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=yakuphanycl&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=default" height="165">
-  <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yakuphanycl&layout=compact&hide_border=true&theme=default&langs_count=8" height="165">
+  <a href="https://github.com/yakuphanycl"><img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=yakuphanycl&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=tokyonight" height="165"></a>
+  <a href="https://github.com/yakuphanycl"><img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yakuphanycl&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" height="165"></a>
 </p>
 
 ## Featured Repositories
@@ -23,7 +24,7 @@ Solo founder of [WinstonRed](https://github.com/yakuphanycl/WinstonRed) with a g
 |---|---|
 | [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard) | Local-first Python monorepo — 59 apps for automation, OSINT, AI utilities, and developer tooling |
 | [instinct](https://github.com/yakuphanycl/instinct) | Self-learning memory MCP server for AI coding agents ([PyPI](https://pypi.org/project/instinct-mcp/)) |
-| [awesome-mcp-servers](https://github.com/yakuphanycl/awesome-mcp-servers) | Curated collection of MCP servers |
+| [wrg-devguard](https://github.com/yakuphanycl/wrg-devguard) | Secret scanning + prompt-policy lint CLI, GitHub Action, Claude skill ([PyPI](https://pypi.org/project/wrg-devguard/)) |
 | [PulseBoard](https://winstonredguard-production.up.railway.app) | Live SaaS for GitHub repository health scoring and monitoring |
 
 ## Numbers
