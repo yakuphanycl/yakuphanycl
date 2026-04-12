@@ -13,10 +13,6 @@
 Software engineer building local-first Python tooling, AI agent infrastructure, and automation systems.
 Solo founder of [WinstonRedGuard](https://github.com/yakuphanycl/WinstonRedGuard) with a governed monorepo approach.
 
-<p align="left">
-  <a href="https://github.com/yakuphanycl"><img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=yakuphanycl&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=tokyonight" height="165"></a>
-  <a href="https://github.com/yakuphanycl"><img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yakuphanycl&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" height="165"></a>
-</p>
 
 ## Featured Repositories
 
