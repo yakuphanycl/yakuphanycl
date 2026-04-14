@@ -1,24 +1,24 @@
 # Yakuphan Yucel
 
-Building local-first Python tools. 68 apps in one governed monorepo.
+Building local-first Python tools. 69 apps in one governed monorepo.
 
-<sub>Auto-updated daily via GitHub Actions — last refresh: 2026-04-13 18:05 UTC</sub>
+<sub>Auto-updated daily via GitHub Actions — last refresh: 2026-04-14 07:19 UTC</sub>
 
 ### Live Metrics
 
 | | |
 |---|---|
-| **68** apps | **3700+** tests |
-| **all passing** CI | **68/68** governance |
+| **69** apps | **3700+** tests |
+| **all passing** CI | **69/69** governance |
 | **2** PyPI packages | **0** CodeQL alerts |
 
 ### Featured
 
 | Repository | Description | Status |
 |---|---|---|
-| [**WinstonRedGuard**](https://github.com/yakuphanycl/WinstonRedGuard) | Local-first Python monorepo — 68 apps, 3700+ tests | ![CI](https://img.shields.io/github/actions/workflow/status/yakuphanycl/WinstonRedGuard/ci.yml?label=CI&style=flat-square) |
+| [**WinstonRedGuard**](https://github.com/yakuphanycl/WinstonRedGuard) | Local-first Python monorepo — 69 apps, 3700+ tests | ![CI](https://img.shields.io/github/actions/workflow/status/yakuphanycl/WinstonRedGuard/ci.yml?label=CI&style=flat-square) |
 | [**wrg-devguard**](https://github.com/yakuphanycl/wrg-devguard) | Secret scanning + prompt-policy lint | [![PyPI](https://img.shields.io/pypi/v/wrg-devguard?style=flat-square)](https://pypi.org/project/wrg-devguard/) |
-| [**wrg-instinct**](https://github.com/yakuphanycl/instinct) | Self-learning memory MCP server for AI agents | [![PyPI](https://img.shields.io/pypi/v/instinct-mcp?style=flat-square)](https://pypi.org/project/instinct-mcp/) |
+| [**instinct**](https://github.com/yakuphanycl/instinct) | Self-learning memory MCP server for AI agents | [![PyPI](https://img.shields.io/pypi/v/instinct-mcp?style=flat-square)](https://pypi.org/project/instinct-mcp/) |
 | [**PulseBoard**](https://winstonredguard-production.up.railway.app) | GitHub repo health scoring — live on Railway | ![Live](https://img.shields.io/website?url=https%3A%2F%2Fwinstonredguard-production.up.railway.app&label=status&style=flat-square) |
 
 ### Repo Health
