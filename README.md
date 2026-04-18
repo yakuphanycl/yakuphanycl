@@ -2,14 +2,14 @@
 
 Building local-first Python tools. 59 apps in one governed monorepo.
 
-<sub>Auto-updated daily via GitHub Actions — last refresh: 2026-04-18 17:31 UTC</sub>
+<sub>Auto-updated daily via GitHub Actions — last refresh: 2026-04-18 17:44 UTC</sub>
 
 ### Live Metrics
 
 | | |
 |---|---|
 | **59** apps | **5400+** tests |
-| **failing** CI | **59/59** governance |
+| **all passing** CI | **59/59** governance |
 | **2** PyPI packages | **8** CodeQL alerts |
 
 ### Featured
@@ -31,7 +31,7 @@ instinct         ██████████████████░░  9
 
 ### Recent Activity
 
-- **156** commits in the last 30 days across all repos
+- **160** commits in the last 30 days across all repos
 - **2** packages on PyPI
 - **0** open security alerts
 
