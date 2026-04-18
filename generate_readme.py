@@ -105,12 +105,31 @@ def recent_commits_count(days: int = 30) -> int:
 
 
 def codeql_alert_count() -> int:
-    """Return the number of open CodeQL alerts across the monorepo (0 on error).
+    """Return the number of open CodeQL alerts across the monorepo.
 
-    Previous version used `per_page=1` and returned `len(data)`, which capped
-    the visible count at 1 and silently reported "0" whenever the page was
-    empty. Paginate with `per_page=100` and loop until a page is short.
+    The default workflow GITHUB_TOKEN is scoped to this profile repo and
+    can't read `/code-scanning/alerts` on yakuphanycl/WinstonRedGuard —
+    that endpoint returns 401 without cross-repo auth. Instead, WRG
+    publishes `metrics/security-alerts.json` on a schedule via its own
+    workflow (same-repo token HAS security_events:read) and we read the
+    raw URL anonymously.
+
+    Source workflow: .github/workflows/publish-security-metrics.yml in WRG.
+    Falls back to a direct API attempt (only useful when run with a PAT
+    locally) and then 0.
     """
+    raw_url = (
+        f"https://raw.githubusercontent.com/{GITHUB_USER}/WinstonRedGuard"
+        f"/main/metrics/security-alerts.json"
+    )
+    data = _get_json(raw_url, headers={"Accept": "application/json"})
+    if isinstance(data, dict):
+        open_count = data.get("open")
+        if isinstance(open_count, int) and open_count >= 0:
+            return open_count
+
+    # Direct API fallback — works locally with a PAT, silently fails in
+    # the default-GITHUB_TOKEN workflow context.
     total = 0
     page = 1
     while True:
@@ -125,7 +144,7 @@ def codeql_alert_count() -> int:
         if len(data) < 100:
             break
         page += 1
-        if page > 20:  # safety cap — 2000 alerts is already off the deep end
+        if page > 20:
             break
     return total
 
