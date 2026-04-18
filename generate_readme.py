@@ -105,15 +105,29 @@ def recent_commits_count(days: int = 30) -> int:
 
 
 def codeql_alert_count() -> int:
-    """Return the number of open CodeQL alerts for WinstonRedGuard (0 on error)."""
-    url = (
-        f"https://api.github.com/repos/{GITHUB_USER}/WinstonRedGuard"
-        f"/code-scanning/alerts?state=open&per_page=1"
-    )
-    data = _get_json(url)
-    if isinstance(data, list):
-        return len(data)
-    return 0
+    """Return the number of open CodeQL alerts across the monorepo (0 on error).
+
+    Previous version used `per_page=1` and returned `len(data)`, which capped
+    the visible count at 1 and silently reported "0" whenever the page was
+    empty. Paginate with `per_page=100` and loop until a page is short.
+    """
+    total = 0
+    page = 1
+    while True:
+        url = (
+            f"https://api.github.com/repos/{GITHUB_USER}/WinstonRedGuard"
+            f"/code-scanning/alerts?state=open&per_page=100&page={page}"
+        )
+        data = _get_json(url)
+        if not isinstance(data, list):
+            break
+        total += len(data)
+        if len(data) < 100:
+            break
+        page += 1
+        if page > 20:  # safety cap — 2000 alerts is already off the deep end
+            break
+    return total
 
 
 def pypi_package_count() -> int:
@@ -128,19 +142,31 @@ def pypi_package_count() -> int:
 
 
 def count_tests(app_count: int) -> str:
-    """Estimate test count from the release_check health artifact or CI logs.
+    """Return a live test-count estimate via GitHub's code search API.
 
-    Falls back to a formula-based estimate derived from app count.
+    GitHub's /search/code `total_count` reports *files* containing the query,
+    not pattern matches, so we can only get the count of test files directly.
+    Empirically (snapshot 2026-04-18) the monorepo has ~18 `def test_`
+    functions per test file (5919 functions / 334 files). Multiply the live
+    file count by 18 and round down to the nearest 100.
+
+    Falls back to a formula-based estimate (app_count * 55) if the search
+    API is rate-limited or errors.
     """
-    # Try fetching latest release-gate artifact for real count
     url = (
-        f"https://api.github.com/repos/{GITHUB_USER}/WinstonRedGuard"
-        f"/actions/artifacts?name=health-snapshot&per_page=1"
+        "https://api.github.com/search/code"
+        f"?q=%22def+test_%22+repo:{GITHUB_USER}/WinstonRedGuard+extension:py+path:apps/"
+        "&per_page=1"
     )
     data = _get_json(url)
-    # Fallback: estimate from app count (avg ~55 tests/app)
+    if isinstance(data, dict):
+        files = data.get("total_count")
+        if isinstance(files, int) and files > 0:
+            estimate = files * 18
+            rounded = (estimate // 100) * 100
+            return f"{rounded}+"
+
     estimate = app_count * 55
-    # Round down to nearest 100
     rounded = (estimate // 100) * 100
     return f"{rounded}+"
 
