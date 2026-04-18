@@ -118,9 +118,12 @@ def codeql_alert_count() -> int:
     Falls back to a direct API attempt (only useful when run with a PAT
     locally) and then 0.
     """
+    # Read from the dedicated `metrics-data` branch — main is protected and
+    # the bot can't push there directly. The security-metrics workflow writes
+    # this file on a daily schedule.
     raw_url = (
         f"https://raw.githubusercontent.com/{GITHUB_USER}/WinstonRedGuard"
-        f"/main/metrics/security-alerts.json"
+        f"/metrics-data/metrics/security-alerts.json"
     )
     data = _get_json(raw_url, headers={"Accept": "application/json"})
     if isinstance(data, dict):
