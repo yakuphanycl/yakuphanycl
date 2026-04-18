@@ -2,14 +2,14 @@
 
 Building local-first Python tools. 59 apps in one governed monorepo.
 
-<sub>Auto-updated daily via GitHub Actions — last refresh: 2026-04-18 01:57 UTC</sub>
+<sub>Auto-updated daily via GitHub Actions — last refresh: 2026-04-18 03:10 UTC</sub>
 
 ### Live Metrics
 
 | | |
 |---|---|
 | **59** apps | **3200+** tests |
-| **failing** CI | **59/59** governance |
+| **all passing** CI | **59/59** governance |
 | **2** PyPI packages | **0** CodeQL alerts |
 
 ### Featured
