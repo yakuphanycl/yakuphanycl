@@ -2,7 +2,7 @@
 
 Building local-first Python tools. 18 apps in one governed monorepo.
 
-<sub>Auto-updated daily via GitHub Actions — last refresh: 2026-04-23 20:56 UTC</sub>
+<sub>Auto-updated daily via GitHub Actions — last refresh: 2026-04-23 21:00 UTC</sub>
 
 ### Live Metrics
 
@@ -24,9 +24,9 @@ Building local-first Python tools. 18 apps in one governed monorepo.
 ### Repo Health
 
 ```
-WinstonRedGuard  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░  84/100
-wrg-devguard     ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░  94/100
-instinct         ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  98/100
+WinstonRedGuard  [█████████████████   ]  84/100
+wrg-devguard     [███████████████████ ]  94/100
+instinct         [████████████████████]  98/100
 ```
 
 ### Recent Activity
