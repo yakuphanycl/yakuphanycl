@@ -24,12 +24,7 @@ GITHUB_USER = "yakuphanycl"
 REPOS = ["WinstonRedGuard", "wrg-devguard", "instinct"]
 PYPI_PACKAGES = ["wrg-devguard", "instinct-mcp", "rule-lab"]
 
-# Visual health scores (hardcoded, curated)
-HEALTH_SCORES: dict[str, int] = {
-    "WinstonRedGuard": 92,
-    "wrg-devguard": 85,
-    "instinct": 90,
-}
+# Health scores are computed live from the GitHub API — see repo_health_score()
 
 # Fallbacks when API is unavailable
 FALLBACK_APP_COUNT = 68
@@ -193,6 +188,46 @@ def count_tests(app_count: int) -> str:
     return f"{rounded}+"
 
 
+def repo_health_score(repo: str) -> int:
+    """Compute a 0-100 health score from three GitHub signals.
+
+    - **CI pass rate** (50 pts) — success ratio across the last 20 completed
+      workflow runs. No runs = assume clean (full credit).
+    - **Push recency** (30 pts) — linear decay, full credit for <=3 days,
+      zero at 33+ days.
+    - **Open issues** (20 pts) — bounded: 20 pts at 0 issues, 0 pts at 20+.
+
+    Single repo metadata call + one workflow-runs call = 2 requests per repo.
+    """
+    score = 0.0
+
+    runs_url = (
+        f"https://api.github.com/repos/{GITHUB_USER}/{repo}"
+        f"/actions/runs?per_page=20&status=completed"
+    )
+    runs_data = _get_json(runs_url)
+    if isinstance(runs_data, dict):
+        runs = runs_data.get("workflow_runs", [])
+        if runs:
+            passed = sum(1 for r in runs if r.get("conclusion") == "success")
+            score += (passed / len(runs)) * 50
+        else:
+            score += 50
+
+    repo_data = _get_json(f"https://api.github.com/repos/{GITHUB_USER}/{repo}")
+    if isinstance(repo_data, dict):
+        pushed_at = repo_data.get("pushed_at", "")
+        if pushed_at:
+            pushed = datetime.fromisoformat(pushed_at.replace("Z", "+00:00"))
+            days = (datetime.now(timezone.utc) - pushed).days
+            score += max(0.0, 30.0 - max(0, days - 3))
+
+        open_issues = repo_data.get("open_issues_count", 0)
+        score += max(0, 20 - min(20, open_issues))
+
+    return min(100, max(0, round(score)))
+
+
 def governance_status(app_count: int) -> str:
     """Check if governance CI gates are passing.
 
@@ -236,6 +271,7 @@ def render_readme(
     pypi_count: int,
     codeql_alerts: int,
     governance: str,
+    health_scores: dict[str, int],
     timestamp: str,
 ) -> str:
     """Build the full README markdown string."""
@@ -269,9 +305,9 @@ Building local-first Python tools. {app_count} apps in one governed monorepo.
 ### Repo Health
 
 ```
-WinstonRedGuard  {health_bar(HEALTH_SCORES["WinstonRedGuard"])}
-wrg-devguard     {health_bar(HEALTH_SCORES["wrg-devguard"])}
-instinct         {health_bar(HEALTH_SCORES["instinct"])}
+WinstonRedGuard  {health_bar(health_scores["WinstonRedGuard"])}
+wrg-devguard     {health_bar(health_scores["wrg-devguard"])}
+instinct         {health_bar(health_scores["instinct"])}
 ```
 
 ### Recent Activity
@@ -315,6 +351,10 @@ def main() -> None:
     governance = governance_status(app_count)
     print(f"  governance: {governance}")
 
+    health_scores = {repo: repo_health_score(repo) for repo in REPOS}
+    for repo, score in health_scores.items():
+        print(f"  health ({repo}): {score}/100")
+
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
 
     readme = render_readme(
@@ -325,6 +365,7 @@ def main() -> None:
         pypi_count=pypi_count,
         codeql_alerts=codeql_alerts,
         governance=governance,
+        health_scores=health_scores,
         timestamp=timestamp,
     )
 
