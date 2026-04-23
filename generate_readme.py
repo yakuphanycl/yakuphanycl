@@ -257,10 +257,16 @@ def governance_status(app_count: int) -> str:
 # ---------------------------------------------------------------------------
 
 def health_bar(score: int, width: int = 20) -> str:
-    """Return a Unicode bar like '█████████████████░░░  85/100'."""
+    """Return a Unicode bar like '▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░  85/100'.
+
+    Uses U+2593 DARK SHADE + U+2591 LIGHT SHADE — same Unicode block, same
+    advance metrics, so the filled/empty transition renders without a visible
+    seam. (U+2588 FULL BLOCK against U+2591 has noticeably different vertical
+    alignment in most monospace fonts.)
+    """
     filled = round(score / 100 * width)
     empty = width - filled
-    return "\u2588" * filled + "\u2591" * empty + f"  {score}/100"
+    return "\u2593" * filled + "\u2591" * empty + f"  {score}/100"
 
 
 def render_readme(
