@@ -22,7 +22,7 @@ from datetime import datetime, timedelta, timezone
 
 GITHUB_USER = "yakuphanycl"
 REPOS = ["WinstonRedGuard", "wrg-devguard", "instinct"]
-PYPI_PACKAGES = ["wrg-devguard", "instinct-mcp"]
+PYPI_PACKAGES = ["wrg-devguard", "instinct-mcp", "rule-lab"]
 
 # Visual health scores (hardcoded, curated)
 HEALTH_SCORES: dict[str, int] = {
@@ -264,7 +264,7 @@ Building local-first Python tools. {app_count} apps in one governed monorepo.
 | [**WinstonRedGuard**](https://github.com/yakuphanycl/WinstonRedGuard) | Local-first Python monorepo — {app_count} apps, {test_count} tests | ![CI](https://img.shields.io/github/actions/workflow/status/yakuphanycl/WinstonRedGuard/ci.yml?label=CI&style=flat-square) |
 | [**wrg-devguard**](https://github.com/yakuphanycl/wrg-devguard) | Secret scanning + prompt-policy lint | [![PyPI](https://img.shields.io/pypi/v/wrg-devguard?style=flat-square)](https://pypi.org/project/wrg-devguard/) |
 | [**instinct**](https://github.com/yakuphanycl/instinct) | Self-learning memory MCP server for AI agents | [![PyPI](https://img.shields.io/pypi/v/instinct-mcp?style=flat-square)](https://pypi.org/project/instinct-mcp/) |
-| [**PulseBoard**](https://winstonredguard-production.up.railway.app/landing) | GitHub repo health scoring — live on Railway | ![Live](https://img.shields.io/website?url=https%3A%2F%2Fwinstonredguard-production.up.railway.app%2Fhealth&label=status&style=flat-square) |
+| [**rule_lab**](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/rule_lab) | Deterministic rule evaluation engine | [![PyPI](https://img.shields.io/pypi/v/rule-lab?style=flat-square)](https://pypi.org/project/rule-lab/) |
 
 ### Repo Health
 
