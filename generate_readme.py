@@ -22,13 +22,13 @@ from datetime import datetime, timedelta, timezone
 
 GITHUB_USER = "yakuphanycl"
 REPOS = ["WinstonRedGuard", "wrg-devguard", "instinct"]
-PYPI_PACKAGES = ["wrg-devguard", "instinct-mcp", "rule-lab"]
+PYPI_PACKAGES = ["wrg-devguard", "instinct-mcp", "wrg-mcp-server", "wrg-rule-lab"]
 
 # Health scores are computed live from the GitHub API — see repo_health_score()
 
 # Fallbacks when API is unavailable
-FALLBACK_APP_COUNT = 68
-FALLBACK_TEST_COUNT = "3700+"
+FALLBACK_APP_COUNT = 17
+FALLBACK_TEST_COUNT = "5000+"
 FALLBACK_RECENT_COMMITS = 100
 
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -167,7 +167,7 @@ def count_tests(app_count: int) -> str:
     functions per test file (5919 functions / 334 files). Multiply the live
     file count by 18 and round down to the nearest 100.
 
-    Falls back to a formula-based estimate (app_count * 55) if the search
+    Falls back to a formula-based estimate (app_count * 315) if the search
     API is rate-limited or errors.
     """
     url = (
@@ -183,7 +183,7 @@ def count_tests(app_count: int) -> str:
             rounded = (estimate // 100) * 100
             return f"{rounded}+"
 
-    estimate = app_count * 55
+    estimate = app_count * 315
     rounded = (estimate // 100) * 100
     return f"{rounded}+"
 
@@ -306,7 +306,8 @@ Building local-first Python tools. {app_count} apps in one governed monorepo.
 | [**WinstonRedGuard**](https://github.com/yakuphanycl/WinstonRedGuard) | Local-first Python monorepo — {app_count} apps, {test_count} tests | ![CI](https://img.shields.io/github/actions/workflow/status/yakuphanycl/WinstonRedGuard/ci.yml?label=CI&style=flat-square) |
 | [**wrg-devguard**](https://github.com/yakuphanycl/wrg-devguard) | Secret scanning + prompt-policy lint | [![PyPI](https://img.shields.io/pypi/v/wrg-devguard?style=flat-square)](https://pypi.org/project/wrg-devguard/) |
 | [**instinct**](https://github.com/yakuphanycl/instinct) | Self-learning memory MCP server for AI agents | [![PyPI](https://img.shields.io/pypi/v/instinct-mcp?style=flat-square)](https://pypi.org/project/instinct-mcp/) |
-| [**rule_lab**](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/rule_lab) | Deterministic rule evaluation engine | [![PyPI](https://img.shields.io/pypi/v/rule-lab?style=flat-square)](https://pypi.org/project/rule-lab/) |
+| [**wrg-mcp-server**](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/wrg_mcp_server) | MCP server exposing the full WRG monorepo | [![PyPI](https://img.shields.io/pypi/v/wrg-mcp-server?style=flat-square)](https://pypi.org/project/wrg-mcp-server/) |
+| [**wrg-rule-lab**](https://github.com/yakuphanycl/WinstonRedGuard/tree/main/apps/rule_lab) | Deterministic rule evaluation engine | [![PyPI](https://img.shields.io/pypi/v/wrg-rule-lab?style=flat-square)](https://pypi.org/project/wrg-rule-lab/) |
 
 ### Repo Health
 
